@@ -77,6 +77,7 @@ nav a.on,nav a:hover{color:var(--ink)}
 .zoomable{cursor:none}
 #lens{position:fixed;left:0;top:0;width:300px;height:300px;border-radius:50%;pointer-events:none;z-index:40;display:none;box-shadow:0 4px 24px rgba(0,0,0,.25),0 0 0 1px rgba(0,0,0,.2);background-repeat:no-repeat;background-color:#fff}
 .hint{font-size:11px;color:var(--mute);margin-top:6px}
+.strip figure.zf::after{content:"⌕";position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.92);font-size:15px;line-height:23px;text-align:center;pointer-events:none}
 
 #peek{position:fixed;left:0;top:0;pointer-events:none;z-index:30;width:260px;opacity:0;transition:opacity .14s;box-shadow:0 2px 12px rgba(0,0,0,.08);background:#fff}
 #peek img,#peek video{width:100%;display:block}
@@ -163,7 +164,7 @@ const PP=lnk("Pedro Pitarch","https://www.pedropitarch.com/home/");
 const TK=lnk("TAKK","https://takksarchive.cargo.site/");
 const YYIG=["Instagram YYPLUSPLUS","https://www.instagram.com/yyplusplus/"];
 const ROLE_YY={es:"Arquitecto colaborador en el equipo de YYPLUSPLUS",en:"Collaborating architect in the YYPLUSPLUS team"};
-const AUTH_YY={es:"YYPLUSPLUS (dir. Óscar Sánchez y César Cañadas)",en:"YYPLUSPLUS (dir. Óscar Sánchez & César Cañadas)"};
+const AUTH_YY={es:"YYPLUSPLUS",en:"YYPLUSPLUS"};
 const I=(s,a,b,cap)=>Array.from({length:b-a+1},(_,k)=>({i:`img/${s}-${String(a+k).padStart(2,"0")}.jpg`,cap}));
 const VS=(s,a,b)=>Array.from({length:b-a+1},(_,k)=>({v:`vid/${s}-v${String(a+k).padStart(2,"0")}`}));
 const RIGHTS={es:"Los derechos de autor de cada proyecto corresponden al estudio para el que fue desarrollado.",en:"Copyright of each project belongs to the office for which it was developed."};
@@ -188,14 +189,8 @@ const SECTIONS=[
   tx:{es:["Identidad espacial y diseño de los elementos de los restaurantes Hungry Club de Dabiz Muñoz en los aeropuertos de España. Como parte del equipo de YYPLUSPLUS participé en el concepto, el diseño y el montaje, la comunicación con cliente, el seguimiento de facturación y las visitas a obra.","También llevé la producción de las piezas a medida de cada local, coordinándome con el equipo de montaje."],
       en:["Spatial identity and design of the elements for Dabiz Muñoz's Hungry Club restaurants in Spanish airports. As part of the YYPLUSPLUS team I worked on concept, design and installation, client communication, invoicing follow-up and site visits.","I also handled the production of the bespoke pieces for each venue, coordinating with the installation team."]},
   au2:AUTH_YY,role:ROLE_YY,ln:[YYIG]},
- {s:"tac",t:"Gota a gota · TAC! 2025",y:"2025",au:"N. Blanco, I. Iglesias, M. Romero",ty:{es:"Concurso",en:"Competition"},st:{es:"2º premio",en:"2nd prize"},
-  m:I("tac",1,5),
-  tx:{es:["Concurso para dos pabellones temporales del festival TAC! 2025, convocado por el Ministerio de Vivienda y Agenda Urbana y la Fundación Arquia."],
-      en:["Competition for two temporary pavilions for the TAC! 2025 festival, run by Spain's Ministry of Housing and Urban Agenda and Fundación Arquia."]},
-  au2:{es:"Nuria Blanco Cantalozella, Iván Iglesias Palomares y Marcos Romero Gerechter",en:"Nuria Blanco Cantalozella, Iván Iglesias Palomares and Marcos Romero Gerechter"},
-  role:{es:"Coautor",en:"Co-author"},ln:[["TAC! · Ganadores 2025","https://tacfestival.com/ganadores-2025/"]]},
  {s:"salacero",t:"Sala Cero",y:"2023–2024",au:YY,ty:{es:"Ejecución",en:"Built project"},st:{es:"Construido",en:"Built"},
-  m:I("salacero",1,12),
+  m:I("salacero",1,6),
   tx:{es:["Nueva identidad espacial y conceptual para la apertura de la Sala Cero de Sala de Despiece (c/ Ayala 27). Participé en todas las fases: concepto, diseño, producción de los elementos a medida y seguimiento de obra."],
       en:["A new spatial and conceptual identity for the opening of Sala de Despiece's Sala Cero (c/ Ayala 27). I took part in every phase: concept, design, production of the bespoke elements and site follow-up."]},
   au2:AUTH_YY,role:ROLE_YY,cr:{es:"Fotografía: Enanei",en:"Photography: Enanei"},
@@ -206,13 +201,19 @@ const SECTIONS=[
       en:["My first project at YYPLUSPLUS: Red Bull's new headquarters in Malasaña. I was part of the project from the team that won the private competition in 2022 through to construction support, including the design of each space in renders for the client."]},
   au2:AUTH_YY,role:ROLE_YY,cr:{es:"Fotografía: IDC Studio, Belvil",en:"Photography: IDC Studio, Belvil"},
   pub:[["Metalocus","https://www.metalocus.es/es/noticias/una-oficina-innovadora-sede-de-red-bull-espana-por-yyplusplus"],["Frame Awards","https://frameweb.com/project/red-bull-spain-headquarters"]],ln:[YYIG]},
- {s:"lec",t:{es:"La LEC: Finales del Campeonato Europeo de League of Legends en Madrid",en:"The LEC: League of Legends European Championship Finals in Madrid"},y:"2025",au:YY,ty:{es:"Concurso privado · Ejecución",en:"Private competition · Built"},st:{es:"Ganado · Construido",en:"Won · Built"},
+ {s:"tac",t:"Gota a gota · TAC! 2025",y:"2025",au:"N. Blanco, I. Iglesias, M. Romero",ty:{es:"Concurso",en:"Competition"},st:{es:"2º premio",en:"2nd prize"},
+  m:I("tac",1,5),
+  tx:{es:["Concurso para dos pabellones temporales del festival TAC! 2025, convocado por el Ministerio de Vivienda y Agenda Urbana y la Fundación Arquia."],
+      en:["Competition for two temporary pavilions for the TAC! 2025 festival, run by Spain's Ministry of Housing and Urban Agenda and Fundación Arquia."]},
+  au2:{es:"Nuria Blanco Cantalozella, Iván Iglesias Palomares y Marcos Romero Gerechter",en:"Nuria Blanco Cantalozella, Iván Iglesias Palomares and Marcos Romero Gerechter"},
+  role:{es:"Coautor",en:"Co-author"},ln:[["TAC! · Ganadores 2025","https://tacfestival.com/ganadores-2025/"]]},
+ {s:"lec",t:{es:"La LEC: Finales del Campeonato Europeo de League of Legends en Madrid",en:"The LEC: League of Legends European Championship Finals in Madrid"},y:"2025",au:YY+" + LASTLAP",ty:{es:"Concurso privado · Ejecución",en:"Private competition · Built"},st:{es:"Ganado · Construido",en:"Won · Built"},
   m:[...I("lec",1,4,{es:"Render",en:"Render",r:1}),...I("lec",5,6,{es:"Evento construido",en:"Built event"})],
   tx:{es:["Escenario para las finales de la LEC en Madrid. Tras una investigación de YYPLUSPLUS sobre e-sports y arquitectura (2019–2021), la propuesta invierte el modelo heredado del deporte tradicional (jugadores abajo, pantallas arriba): eleva a los jugadores a la altura de los ojos y baja la pantalla al lugar del campo, porque es ahí donde ocurre de verdad el juego.","Más de 25.000 personas lo vivieron en tres días. Las imágenes 1–4 son los renders que realicé para ganar el concurso."],
       en:["Stage for the LEC finals in Madrid. Following YYPLUSPLUS's research on e-sports and architecture (2019–2021), the proposal flips the model inherited from traditional sports (players below, screens above): it raises the players to eye level and brings the screen down to where the field would be, because that is where the game actually happens.","Over 25,000 people experienced it across three days. Images 1–4 are the renders I produced to win the competition."]},
-  au2:AUTH_YY,role:ROLE_YY,ln:[YYIG]},
+  au2:{es:"YYPLUSPLUS + LASTLAP",en:"YYPLUSPLUS + LASTLAP"},role:ROLE_YY,ln:[YYIG]},
  {s:"takk",t:"Arca de la Convivencia · Fireplace · AAA",y:"2022",au:TK,ty:{es:"Ejecución",en:"Built project"},st:{es:"Construido",en:"Built"},
-  m:I("takk",1,5),
+  m:I("takk",1,3),
   tx:{es:["Durante mi estancia en Barcelona formé parte del equipo de desarrollo y construcción de tres proyectos del estudio TAKK."],
       en:["While living in Barcelona I was part of the development and construction team for three projects by TAKK."]},
   au2:{es:"TAKK",en:"TAKK"},role:{es:"Colaborador en el equipo de desarrollo y construcción",en:"Collaborator in the development and construction team"},
@@ -221,19 +222,19 @@ const SECTIONS=[
   m:[...I("aalst",1,3),...VS("aalst",1,1)],
   tx:{es:["Propuesta ganadora para Tragel Zuid, en Aalst (Bélgica): el tiempo como herramienta de proyecto en lugar de un plan cerrado, en dos actos: primero dispositivos y ecologías temporales, después arquitectura permanente para los usos que funcionen.","Modelé el entorno y la propuesta, produje las imágenes del concurso y desarrollé las animaciones 3D y paramétricas del vídeo para Europan."],
       en:["Winning entry for Tragel Zuid in Aalst (Belgium): time as a design tool instead of a fixed masterplan, in two acts: first temporary devices and ecologies, then permanent architecture for the uses that prove successful.","I modelled the site and the proposal, produced the competition images and developed the 3D and parametric animations for the Europan video."]},
-  au2:{es:"Pedro Pitarch",en:"Pedro Pitarch"},role:{es:"Colaborador: modelado, imagen y animación (render parcial: Miguel Ruiz)",en:"Collaborator: modelling, images and animation (partial rendering: Miguel Ruiz)"},
+  au2:{es:"Pedro Pitarch",en:"Pedro Pitarch"},role:{es:"Colaborador",en:"Collaborator"},
   ln:[["Vídeo / Video","https://www.youtube.com/watch?v=EAhNeVpiz3c"],["Fundación Arquia","https://fundacion.arquia.com/es-es/convocatorias/proxima/p/ProximaRealizacion/FichaDetalle?idrealizacion=7931&idparticipacion=15225"],["Pedro Pitarch","https://www.pedropitarch.com/home/"]]},
  {s:"graz",t:"Europan 16 · Graz: Post-Shopping",y:"2021–2022",au:PP,ty:{es:"Concurso",en:"Competition"},st:{es:"Mención",en:"Runner-up"},
   m:I("graz",1,3),
   tx:{es:["Un centro comercial convertido en «condensador social»: una serie de espinas arquitectónicas cruzan el parque y acogen actividades sobre todo no comerciales, mezclando producción y consumo, a medio camino entre plaza y edificio.","Mismo equipo y mismo papel: modelado, imágenes del concurso y animaciones 3D y paramétricas para el vídeo."],
       en:["A shopping mall turned into a «social condenser»: a series of architectural spines cross the park and host mostly non-commercial activities, blending production and consumption, halfway between plaza and building.","Same team and same role: modelling, competition images and 3D/parametric animations for the video."]},
-  au2:{es:"Pedro Pitarch",en:"Pedro Pitarch"},role:{es:"Colaborador: modelado, imagen y animación",en:"Collaborator: modelling, images and animation"},
+  au2:{es:"Pedro Pitarch",en:"Pedro Pitarch"},role:{es:"Colaborador",en:"Collaborator"},
   ln:[["Vídeo / Video","https://www.youtube.com/watch?v=0LMJWa4Qd3k"],["Fundación Arquia","https://fundacion.arquia.com/es-es/convocatorias/proxima/p/ProximaRealizacion/FichaDetalle?idrealizacion=7941&idparticipacion=15235"],["Pedro Pitarch","https://www.pedropitarch.com/home/"]]},
  ]},
  {k:"E",es:"Editorial / Académico",en:"Editorial / Academic",note:{es:"Publicaciones, exposiciones, docencia y trabajos académicos.",en:"Publications, exhibitions, teaching and academic work."},colAu:{es:"Institución",en:"Institution"},
   items:[
  {s:"casahuerto",t:"La casa-huerto · TFM",y:"2022–2023",au:"ETSAV",ty:{es:"Trabajo académico",en:"Academic work"},st:{es:"Publicado",en:"Published"},
-  m:[...I("casahuerto",1,5),...VS("casahuerto",1,1)],
+  m:[{i:"img/casahuerto-01.jpg",zoom:"img/casahuerto-01-zoom.jpg"},...I("casahuerto",2,5),...VS("casahuerto",1,1),{i:"img/casahuerto-06.jpg",zoom:"img/casahuerto-06-zoom.jpg"}],
   tx:{es:["Parte de un análisis de las infraestructuras abandonadas en torno al río Ter, en Osona, y del patrimonio industrial catalán que figura oficialmente en ruina, cartografiado de forma paramétrica como espacio de oportunidad.","En la nave de Can Tarrés se sustituye la cubierta en ruinas y el interior se coloniza con construcciones domésticas más pequeñas y accesibles."],
       en:["It starts from an analysis of abandoned infrastructure along the river Ter, in Osona, and of Catalan industrial heritage officially listed as derelict, mapped parametrically as a space of opportunity.","In the Can Tarrés factory the ruined roof is replaced and the interior is colonised with smaller, more accessible domestic buildings."]},
   au2:{es:"Marcos Romero Gerechter",en:"Marcos Romero Gerechter"},role:{es:"Autor",en:"Author"}},
@@ -250,11 +251,11 @@ const SECTIONS=[
   au2:{es:"Marcos Romero Gerechter",en:"Marcos Romero Gerechter"},role:{es:"Autor del dibujo (comisión)",en:"Author of the drawing (commission)"},
   ln:[["Ajuntament de Barcelona","https://ajuntament.barcelona.cat/agendasostenible/es/noticias/la-segunda-edicion-del-festival-de-arquitecturas-model-reune-mas-de-20-000-visitantes-1283783"]]},
  {s:"miau",t:"LAB AMD · Alquimia de materiales digitales",y:"2021",au:"OFFMIAU",ty:{es:"Curso",en:"Workshop"},st:{es:"Docente",en:"Instructor"},
-  m:[...I("miau",1,5),...VS("miau",1,1)],
+  m:[...I("miau",1,3),...VS("miau",1,1)],
   tx:{es:["Programación e impartición de un curso de render con V-Ray Next: experimentos con texturas procedurales."],en:["Designed and taught a rendering workshop with V-Ray Next: experiments with procedural textures."]},
   role:{es:"Docente",en:"Instructor"}},
  {s:"bitacora",t:"#bitácora",y:"2021",au:"Ud. Soriano · ETSAM",ty:{es:"Libro",en:"Book"},st:{es:"Publicado",en:"Published"},
-  m:I("bitacora",1,1),
+  m:I("bitacora",1,1),img:{es:"Portada de la publicación (junto con Manuela Sancho)",en:"Cover of the publication (with Manuela Sancho)"},
   tx:{es:["Libro de la unidad docente Soriano. Participé en la maquetación y en los renders e imágenes del libro."],en:["Book by the Soriano teaching unit. I worked on the layout and on the book's renders and images."]},
   role:{es:"Maquetación, renders e imágenes",en:"Layout, renders and images"}},
  {s:"utopias",t:"Utopías–Reactivaciones",y:"2026",au:"DPA ETSAM",ty:{es:"Publicación",en:"Publication"},st:{es:"Publicado",en:"Published"},
@@ -274,14 +275,14 @@ const SECTIONS=[
   role:{es:"Maquetas, con Silvia García",en:"Models, with Silvia García"},cr:{es:"Fotografía: CentroCentro",en:"Photography: CentroCentro"},
   ln:[["CentroCentro","https://www.centrocentro.org/exposicion/la-ciudad-del-futuro-de-la-huerta-la-mesa"],["Flickr · CentroCentro","https://www.flickr.com/photos/centrocentrocibeles/51704746995/in/album-72157720175939994"]]},
  {s:"soriano",t:"Apoyo a la docencia · Ud. Soriano",y:"2020–2021",au:"DPA ETSAM",ty:{es:"Docencia",en:"Teaching"},st:{es:"Beca",en:"Grant"},
-  m:I("soriano",1,6),
+  m:I("soriano",1,5),
   tx:{es:["Becado por el DPA de la ETSAM para dar apoyo a la docencia: seguimiento de las clases, coordinación y diseño de la línea gráfica y los carteles del curso."],
       en:["Grant from ETSAM's Department of Architectural Design to support teaching: following classes, coordination, and designing the course's graphic line and posters."]},
   role:{es:"Becario de apoyo a la docencia",en:"Teaching assistant (grant)"}},
  ]}
 ];
 
-const LAB={au:{es:"Autoría",en:"Authorship"},role:{es:"Rol",en:"Role"},cr:{es:"Créditos",en:"Credits"},pub:{es:"Publicaciones",en:"Publications"},ln:{es:"Más información",en:"More"}};
+const LAB={img:{es:"Imagen",en:"Image"},au:{es:"Autoría",en:"Authorship"},role:{es:"Rol",en:"Role"},cr:{es:"Créditos",en:"Credits"},pub:{es:"Publicaciones",en:"Publications"},ln:{es:"Más información",en:"More"}};
 const ALL=[];
 let L=(()=>{try{return localStorage.getItem("lang")}catch(e){return null}})()||"es";
 const $=s=>document.querySelector(s);
@@ -293,7 +294,7 @@ function media(m){
   const cap=m.cap?`<figcaption class="${m.cap.r?"r":""}">${tr(m.cap)}</figcaption>`:"";
   if(m.show) return `<figure><div class="show" data-show='${JSON.stringify(m.show)}'><img alt=""><img alt="" style="opacity:0"></div>${cap}</figure>`;
   if(m.v) return `<figure><video muted loop playsinline preload="none" data-poster="${m.v}.jpg" data-src="${m.v}.mp4"></video>${cap}</figure>`;
-  return `<figure><img loading="lazy" data-src="${m.i}" ${m.zoom?`class="zoomable" data-zoom="${m.zoom}"`:""} alt="">${cap}</figure>`;
+  return `<figure${m.zoom?' class="zf"':""}><img loading="lazy" data-src="${m.i}" ${m.zoom?`class="zoomable" data-zoom="${m.zoom}"`:""} alt="">${cap}</figure>`;
 }
 function build(){
   $("#work").innerHTML=SECTIONS.map((sec,si)=>{
@@ -303,9 +304,9 @@ function build(){
     return head+sec.items.map((p,n)=>{
       const gi=ALL.push(p)-1; p.no=sec.k+String(n+1).padStart(2,"0");
       const L2=a=>(a||[]).map(([t,u])=>lnk(t,u)).join("<br>");
-      const dl=[p.au2&&[LAB.au,tr(p.au2)],p.role&&[LAB.role,tr(p.role)],p.cr&&[LAB.cr,tr(p.cr)],p.pub&&[LAB.pub,L2(p.pub)],p.ln&&[LAB.ln,L2(p.ln)]].filter(Boolean)
+      const dl=[p.img&&[LAB.img,tr(p.img)],p.au2&&[LAB.au,tr(p.au2)],p.role&&[LAB.role,tr(p.role)],p.cr&&[LAB.cr,tr(p.cr)],p.pub&&[LAB.pub,L2(p.pub)],p.ln&&[LAB.ln,L2(p.ln)]].filter(Boolean)
         .map(([k,v])=>`<dt>${tr(k)}</dt><dd>${v}</dd>`).join("");
-      const zoomHint=p.m&&p.m.some(m=>m.zoom)?`<p class="hint">${tr({es:"Pasa el cursor sobre el dibujo para ampliarlo.",en:"Hover over the drawing to magnify it."})}</p>`:"";
+      const zoomHint=p.m&&p.m.some(m=>m.zoom)?`<p class="hint">${tr({es:"Pasa el cursor sobre las imágenes marcadas con lupa para ampliarlas.",en:"Hover over the images marked with a magnifier to enlarge them."})}</p>`:"";
       const strip=p.m&&p.m.length?`<div class="strip">${p.m.map(media).join("")}</div>`:"";
       return `<div class="item rv" id="${p.s}">
         <div class="row" data-g="${gi}">
@@ -403,14 +404,14 @@ document.addEventListener("mouseleave",()=>{inWin=false;hov=null});
   // horizontal edge scroll for the hovered strip, with eased acceleration
   document.querySelectorAll(".item.open .strip").forEach(st=>{
     let target=0;const idle=Date.now()-lastAct>10000;
-    if(st===hov&&!idle){const r=st.getBoundingClientRect(),zone=Math.min(380,r.width*.33);
-      if(mx>r.right-zone)target=smooth(Math.min(1,(mx-(r.right-zone))/zone));
-      else if(mx<r.left+zone)target=-smooth(Math.min(1,(r.left+zone-mx)/zone));
-      target*=13}
+    if(st===hov&&!idle){const r=st.getBoundingClientRect(),zone=r.width*.4;
+      if(mx>r.right-zone)target=Math.pow(Math.min(1,(mx-(r.right-zone))/zone),3);
+      else if(mx<r.left+zone)target=-Math.pow(Math.min(1,(r.left+zone-mx)/zone),3);
+      target*=14}
     else if(idle){ // idle: slow continuous drift
       const max=st.scrollWidth-st.clientWidth;
       if(max>0){if(st.scrollLeft>=max-1)idleDir=-1;else if(st.scrollLeft<=0)idleDir=1;target=.45*idleDir}}
-    st._v=(st._v||0)+(target-(st._v||0))*.06;
+    st._v=(st._v||0)+(target-(st._v||0))*.045;
     if(Math.abs(st._v)>.02){st._f=(st._f||st.scrollLeft)+st._v;st.scrollLeft=st._f}else st._f=st.scrollLeft;
   });
   // gentle page scroll when the cursor rests near the bottom (or top) edge
@@ -429,8 +430,8 @@ function lensMove(e){
   const im=e.target.closest&&e.target.closest("img.zoomable");
   if(!im||!im.complete){lens.style.display="none";return}
   const r=im.getBoundingClientRect(),px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;
-  const bw=r.width*LZ,bh=r.height*LZ,s=300;
-  if(lens.dataset.z!==im.dataset.zoom){lens.dataset.z=im.dataset.zoom;lens.style.backgroundImage=`url("${im.dataset.zoom}")`}
+  const z=Math.max(1.8,Math.min(LZ,(im.dataset.zw||im.naturalWidth)/r.width*1.6));const bw=r.width*z,bh=r.height*z,s=300;
+  if(lens.dataset.z!==im.dataset.zoom){lens.dataset.z=im.dataset.zoom;lens.style.backgroundImage=`url("${im.dataset.zoom}")`;if(!im.dataset.zw){const t=new Image();t.onload=()=>{im.dataset.zw=t.naturalWidth};t.src=im.dataset.zoom}}
   lens.style.backgroundSize=`${bw}px ${bh}px`;
   lens.style.backgroundPosition=`${-(px*bw-s/2)}px ${-(py*bh-s/2)}px`;
   lens.style.transform=`translate(${e.clientX-s/2}px,${e.clientY-s/2}px)`;lens.style.display="block";
